@@ -1,0 +1,34 @@
+var loadImage = url => {
+	// returning a new promise
+  return new Promise(function(resolve, reject) {
+
+    //Open a new XHR
+    var request = new XMLHttpRequest();
+    request.open('GET', url);
+    
+    // When the request loads, check whether it was successful
+    request.onload = function() {
+      if (request.status === 200) {
+        // If successful, resolve the promise
+        resolve(request.response);
+      } else {
+        // Otherwise, reject the promise
+        reject(Error('An error occurred while loading image. error code:' + request.statusText));
+      }
+    };
+
+    request.send();
+  });
+
+};
+
+var embedImage = url => {
+  loadImage(url).then(function(result) {
+      document.querySelector('body').insertAdjacentHTML('beforeend', result);
+    },
+    function(err) {
+      console.log(err);
+    });
+}
+
+embedImage("https://static.jsbin.com/images/dave.min.svg");

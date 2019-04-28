@@ -1,0 +1,16 @@
+<canvas id="cnv"></canvas>
+
+if (window.WebGLRenderingContext) {
+try { 
+  var canvas = document.getElementById("cnv");
+  gl = canvas.getContext("webgl"); 
+}
+catch (x) { 
+  gl = null;
+}
+
+if (gl !== null) {
+    console.log("webGL is supported");
+}
+}
+

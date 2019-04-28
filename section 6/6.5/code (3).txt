@@ -1,0 +1,45 @@
+function*() {
+    while (true) {
+        yield;
+        console.log('Tick!');
+        yield;
+        console.log('Tock!');
+    }
+}
+
+function* test() {
+
+var x = test();
+x.next();
+x.next();
+x.next();
+x.next();
+
+function coroutine(f) {
+	// instantiate the coroutine
+    var o = f();
+	 // execute until the first yield
+    o.next();
+    return function() {
+        o.next();
+    }
+}
+
+function coroutine(f) {
+    var o = f(); // instantiate the coroutine
+    o.next(); // execute until the first yield
+    return function() {
+        o.next();
+    }
+}
+
+var clock = coroutine(function*() {
+    while (true) {
+        yield;
+        console.log('Tick!');
+        yield;
+        console.log('Tock!');
+    }
+});
+
+setInterval(clock, 1000);

@@ -1,0 +1,19 @@
+function doWork(type) {
+  alert(`Starting my ${type} work.`);
+}
+
+doWork('cooking');
+
+function doWork(type, callback) {
+  alert('Starting ' + type);
+  callback();
+}
+
+doWork('cooking', function() {
+  alert('Finished my work');
+});
+
+function alertFinished(){
+  alert('Finished my work');
+}
+

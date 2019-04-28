@@ -1,0 +1,18 @@
+coroutine(function* () {
+  let posts = yield fetchPosts();
+  let promises = posts.map(post => fetchComments(post));
+  let comments = yield Promise.all(promises);
+  displayComments(comments);
+});
+
+function coroutine(fn) {
+  let gen = fn();
+  let doNext = (data) => {
+    let next = gen.next(data);
+    if (!next.done) {
+      return next.value.then(doNext);
+    }
+  };
+  doNext();
+}
+

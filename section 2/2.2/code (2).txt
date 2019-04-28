@@ -1,0 +1,16 @@
+function greeting(name) {
+  console.log(`Hello ${name}, welcome to Scotch!`);
+}
+    
+function introduction(firstName, lastName, callback) {
+      
+  const fullName = `${firstName} ${lastName}`;
+  console.log('inside introduction call before callback');
+  callback(fullName);
+  console.log('inside introduction call after callback');
+}
+
+
+introduction('Chris','Nwamba', greeting);
+
+console.log('after introduction call');

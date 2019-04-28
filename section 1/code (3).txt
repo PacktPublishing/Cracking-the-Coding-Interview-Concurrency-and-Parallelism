@@ -1,0 +1,39 @@
+function first(){
+  console.log(1);
+}
+function second(){
+  console.log(2);
+}
+
+first();
+second();
+
+function first(){
+  // Simulate a code delay
+  setTimeout( function(){
+    console.log(1);
+  }, 500 );
+}
+
+function first(){
+  // Simulate a code delay
+  setTimeout( function(){
+    console.log(1);
+  }, 500 );
+}
+
+function getRandomDelay() {
+  return Math.floor((Math.random() * 1000) + 1);
+}
+
+setTimeout(function(){
+    console.log(2);
+  }, getRandomDelay() );
+
+for(a = 1000; a > 0; a = a - 100){
+  (function (a) {
+    setTimeout(function () {
+      console.log('performing some other work ' + a);
+    }, a);
+  })(a);
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+            <script src="./gpu.min.js"></script>
+            <script src="./gpu.js"></script>
+    </body>
+</html>
+
+// new instance of GPU Library
+const gpu = new GPU();
+
+const SIZE = 512;
+
+const value = [];
+for (let i = 0; i < SIZE; i++) {
+const row = [];
+for (j = 0; j < SIZE; j++) {
+row.push(Math.random() * (1000 - 1 + 1) + 1);
+}
+value.push(row);
+}
+
+// creating a kernel funciton
+const matMult = gpu.createKernel(function (a, b) {
+let sum = 0;
+for (let i = 0; i < size; i++) {
+sum += a[this.thread.y][i] * b[i][this.thread.x];
+}
+return sum;
+} , {
+constants: { size: SIZE },
+output: [SIZE,SIZE],
+});
+
+// calling the kernel and logging the results
+const result = matMult(value, value);
+console.log(result);
+

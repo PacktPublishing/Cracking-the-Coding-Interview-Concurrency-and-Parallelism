@@ -1,0 +1,16 @@
+// registers set timeout
+setTimeout(function(){
+  console.log('Third');
+}, 1000);
+
+// creates functions
+function executeFirst(){
+  console.log('First');
+}
+function executeSecond(){
+  console.log('Second');
+}
+
+// executes functions
+executeFirst();
+executeSecond();

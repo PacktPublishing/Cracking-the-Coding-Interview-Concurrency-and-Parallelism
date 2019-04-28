@@ -1,0 +1,11 @@
+function* numbersGenerator() {
+	yield 5;
+	yield 7;
+	return 11;
+}
+
+const iterator = numbersGenerator();
+
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());

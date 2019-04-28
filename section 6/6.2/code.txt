@@ -1,0 +1,14 @@
+function serverRequest(resource, callback){
+  setTimeout(function(){
+    var response = resource + " loaded!";
+    callback(response);
+  },5000);
+}
+
+function getResults(results){
+  console.log("Response from the server: " + results);
+}
+
+serverRequest("Resource A", getResults);
+
+console.log("performing other work");
