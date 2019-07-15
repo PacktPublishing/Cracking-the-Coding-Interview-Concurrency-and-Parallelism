@@ -3,18 +3,19 @@ This is the code repository for [Cracking the Coding Interview: Concurrency and 
 ## About the Video Course
 With our processors becoming more advanced, every company is looking for developers who can write efficient and parallel code for their services. This course will help you prepare for your upcoming interview and become a professional at writing parallel commands in JavaScript code inside a browser.
 
-The main focus of this course is to provide you with solutions to the most commonly-asked interview questions. You will learn the concepts of parallel programming in JavaScript and take advantage of the hardware cores. You’ll understand the asynchronous nature of JavaScript and utilize the GPU to run parallel programs. We’ll provide several techniques to achieve parallelism by implementing them in some real-life scenarios. 
+The main focus of this course is to provide you with solutions to the most commonly-asked interview questions. You will learn the concepts of parallel programming in JavaScript and take advantage of the hardware cores. You’ll understand the asynchronous nature  of JavaScript and utilize the GPU to run parallel programs. We’ll provide several techniques to achieve parallelism by implementing them in some real-life scenarios. 
 
 By the end of this course, you’ll be confident with your parallelism concepts to solve any problem given to you during an interview. Moreover, you’ll be capable of applying your learning to other programming languages.
+
 
 <H2>What You Will Learn</H2>
 <DIV class=book-info-will-learn-text>
 <UL>
 <LI>Construct the JavaScript runtime environment to implement parallelism in the browser 
-<LI>Parallelize your code to increase the efficiency of the code and distribute work across multiple processors 
+<LI>Parallelize your code to increase the efficiency of the code and distribute work across multiple processors
 <LI>Design a parallel execution flow to increase efficiency 
 <LI>Apply the core concepts of parallel programming in JavaScript 
-<LI>Secure your parallel code from unexpected exceptions by applying efficient exception-handling strategies 
+<LI>Secure your parallel code from unexpected exceptions by applying efficient exception-handling strategies
 <LI>Encapsulate the concept of async callbacks to apply concurrency </LI></UL></DIV>
 
 ## Instructions and Navigation
@@ -50,7 +51,6 @@ Memory: 2 GB of RAM
 
 Storage: 1 GB of free hard drive space
 
-
 Recommended Hardware Requirements
 For an optimal experience with hands-on labs and other practical activities, we recommend the following configuration:
 
@@ -68,7 +68,6 @@ Memory: 6 GB RAM
 
 
 Storage: 4 GB of free hard drive space
-
 
 Software Requirements
 
